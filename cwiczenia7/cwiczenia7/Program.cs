@@ -1,3 +1,4 @@
+using cwiczenia7.Endpoints;
 using cwiczenia7.Services;
 using cwiczenia7.Validators;
 using FluentValidation;
@@ -7,13 +8,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IDbService,DbService>();
 builder.Services.AddValidatorsFromAssemblyContaining<OrderValidator>();
-
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.RegisterWarehouseEndpoints();
 app.UseHttpsRedirection();
 app.Run();

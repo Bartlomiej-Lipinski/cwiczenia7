@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace cwiczenia7.Validators;
 
-public class OrderValidator : AbstractValidator<GetOrder>
+public class OrderValidator : AbstractValidator<getOrder>
 {
     public OrderValidator()
     {
