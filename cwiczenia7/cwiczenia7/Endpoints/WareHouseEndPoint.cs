@@ -28,7 +28,7 @@ public static class WareHouseEndPoint
                 Results.BadRequest("Order Already exists");
             }
             
-            return Results.Ok($"Warehouse {warehouse} created");
+            return Results.Ok($"{warehouse} created");
         });
     }
 }
